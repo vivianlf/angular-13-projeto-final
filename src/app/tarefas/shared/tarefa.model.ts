@@ -5,7 +5,6 @@ export class Tarefa {
 		public nome?: string,
 		public concluida?: boolean,
 		public fav?: boolean,
-		public tag?: string
 		
 		) {}
 }

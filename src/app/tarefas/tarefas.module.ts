@@ -7,11 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { CadastrarTarefaComponent } from './cadastrar/cadastrar-tarefa.component';
 import { EditarTarefaComponent } from './editar/editar-tarefa.component';
 import { FavoritarTarefaComponent } from './favoritar/favoritar-tarefa.component';
-import { ExcluirTarefaComponent } from './excluir/excluir-tarefa.component';
 import { ConcluirTarefaComponent } from './concluir/concluir-tarefa.component';
 import { TarefaConcluidaDirective } from './shared/tarefa-concluida.directive';
-import { TarefaFavDirective } from './shared/tarefa-fav.directive';
-
 
 
 @NgModule({
@@ -20,10 +17,8 @@ import { TarefaFavDirective } from './shared/tarefa-fav.directive';
     CadastrarTarefaComponent,
     EditarTarefaComponent,
     FavoritarTarefaComponent,
-    ExcluirTarefaComponent,
     ConcluirTarefaComponent,
     TarefaConcluidaDirective,
-    TarefaFavDirective
     
   ],
   imports: [
@@ -34,6 +29,14 @@ import { TarefaFavDirective } from './shared/tarefa-fav.directive';
 
   providers:[
     TarefaService
+  ],
+
+  exports: [
+    ListarTarefaComponent,
+    CadastrarTarefaComponent,
+    EditarTarefaComponent,
+    FavoritarTarefaComponent,
+    ConcluirTarefaComponent
   ]
 })
 export class TarefasModule { }

@@ -4,13 +4,14 @@ import { CalculadoraRoutes } from './calculadora/calculadora-routing.module';
 import { ConversorRoutes } from './conversor/conversor-routing.module';
 import { DashboardRoutes } from './dashboard/dashboard-routing.module';
 import { JogoDaVelhaRoutes } from './jogo-da-velha/jogo-da-velha-routing.module';
+import { LoginRoutes } from './login/login-routing.module';
 import { TarefaRoutes } from './tarefas/tarefas-routing.module';
 
 
 export const routes: Routes = [
 	{ 
 		path: '', 
-		redirectTo: '/dashboard', 
+		redirectTo: '/login', 
 		pathMatch: 'full' 
 	},
 	
@@ -18,8 +19,8 @@ export const routes: Routes = [
 	...CalculadoraRoutes,
 	...ConversorRoutes,
 	...TarefaRoutes,
-	...JogoDaVelhaRoutes
-	
+	...JogoDaVelhaRoutes,
+    ...LoginRoutes	
 	
 ];
 

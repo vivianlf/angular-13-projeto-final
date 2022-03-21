@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" *ngIf="mostrarNav">
     <div class="container-fluid">
       <!-- suporte a mobile -->
       <div class="navbar-header">
@@ -8,26 +8,25 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Projeto final</a>
+        <a class="navbar-brand">Gerenciador</a>
       </div>
   
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Inicial</a></li>
+        <ul class="nav navbar-nav" style="float: left;">
+          <li><a [routerLink]="['./dashboard']">Dashboard</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              Projetos <span class="caret"></span>
+              Ferramentas <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-              <li><a [routerLink]="['./dashboard']">Dashboard</a></li>
-              <li role="separator" class="divider"></li>
               <li><a [routerLink]="['./calculadora']">Calculadora</a></li>
               <li><a [routerLink]="['./conversor']">Conversor de moedas</a></li>
               <li><a [routerLink]="['./tarefas']">Gerenciador de tarefas</a></li>
-              <li><a [routerLink]="['./jogo-da-velha']">Jogo da velha</a></li>
+              <li><a [routerLink]="['./jogo-da-velha']"> Jogos</a></li>
             </ul>
           </li>
         </ul>
+        <ul class="nav navbar-nav" style="float:right;"><li style="float: right;"><a (click)="fazerLogout()">Sair</a></li></ul>
       </div>
     </div>
   </nav>

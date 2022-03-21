@@ -4,7 +4,6 @@ import { CadastrarTarefaComponent } from './cadastrar/cadastrar-tarefa.component
 import { EditarTarefaComponent } from './editar/editar-tarefa.component';
 import { FavoritarTarefaComponent } from './favoritar/favoritar-tarefa.component';
 import { ConcluirTarefaComponent } from './concluir/concluir-tarefa.component';
-import { ExcluirTarefaComponent } from './excluir/excluir-tarefa.component';
 
 
 export const TarefaRoutes: Routes = [
@@ -35,13 +34,6 @@ export const TarefaRoutes: Routes = [
 	{ 
 		path: 'tarefas/concluir', 
 		component: ConcluirTarefaComponent
-	},
-	{ 
-		path: 'tarefas/excluir/:id', 
-		component: ExcluirTarefaComponent
-	},	
-	{ 
-		path: 'tarefas/excluir', 
-		component: ExcluirTarefaComponent
 	}
+	
 ];

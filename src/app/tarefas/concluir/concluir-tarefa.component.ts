@@ -36,11 +36,6 @@ export class ConcluirTarefaComponent implements OnInit {
     }
   }
 
-  alterarPrioridade(tarefa: Tarefa): void {
-    if (confirm('Deseja alterar "' + tarefa.nome + '"para urgente ?')) {
-      this.tarefaService.alterarPrioridade(tarefa.id);
-      this.tarefas = this.tarefaService.listarTodos();
-    }
-  }
+  
 
 }

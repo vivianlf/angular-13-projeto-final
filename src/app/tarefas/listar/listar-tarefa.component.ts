@@ -29,17 +29,20 @@ export class ListarTarefaComponent implements OnInit {
     }
   }
 
-  alterarStatus(tarefa: Tarefa): void {
+  alterarStatus($event: any, tarefa: Tarefa): void {
+    $event.preventDefault();
     if (confirm('Deseja alterar o status da tarefa "' + tarefa.nome + '"?')) {
       this.tarefaService.alterarStatus(tarefa.id);
       this.tarefas = this.tarefaService.listarTodos();
     }
   }
 
-  alterarPrioridade(tarefa: Tarefa): void {
-    if (confirm('Deseja alterar "' + tarefa.nome + '"para urgente ?')) {
+  alterarPrioridade($event: any, tarefa: Tarefa): void {
+    $event.preventDefault();
+    if (confirm('Deseja alterar o status da tarefa "' + tarefa.nome + '"?')) {
       this.tarefaService.alterarPrioridade(tarefa.id);
       this.tarefas = this.tarefaService.listarTodos();
+    
     }
   }
 

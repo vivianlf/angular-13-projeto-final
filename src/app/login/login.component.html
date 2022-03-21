@@ -1,0 +1,12 @@
+<h2 style="margin-left: 100px;">Login</h2>
+<div class="well" style="margin-top: 80px; margin-bottom: 50px; margin-left: 100px; margin-right: 100px;">
+        <div class="form-group">
+            <label for="usuario">Usuário:</label>
+            <input type="text" class="form-control" id="usuario" [(ngModel)]="usuario.nome" #nome="ngModel">
+            <label for="senha">Senha:</label>
+            <input type="password" class="form-control" id="senha" [(ngModel)]="usuario.senha" #senha="ngModel">
+        </div>
+        <div class="form-group text-center">
+            <input type="submit" class="btn btn-success" (click)="fazerLogin()"> 
+        </div>
+</div>

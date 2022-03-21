@@ -7,6 +7,8 @@ import { CalculadoraModule } from './calculadora/calculadora.module';
 import { ConversorModule } from './conversor/conversor.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { JogoDaVelhaModule } from './jogo-da-velha/jogo-da-velha.module';
+import { AuthService } from './login/auth.service';
+import { LoginModule } from './login/login.module';
 import { TarefasModule } from './tarefas/tarefas.module';
 
 @NgModule({
@@ -20,10 +22,15 @@ import { TarefasModule } from './tarefas/tarefas.module';
     ConversorModule,
     TarefasModule,
     JogoDaVelhaModule,
+    LoginModule,
     AppRoutingModule
  
   ],
-  providers: [],
+
+  exports: [
+    AppComponent
+  ],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

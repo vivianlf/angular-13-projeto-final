@@ -25,14 +25,14 @@
         {{ tarefa.nome }}
       </td>
       <td style="width: 70px" class="text-center" *ngIf="!tarefa.concluida && tarefa.fav">
-        <input type="checkbox" (click)="alterarStatus(tarefa)" [value]="tarefa.id" [checked]="tarefa.concluida">
+        <input type="checkbox" (click)="alterarStatus($event, tarefa)" [value]="tarefa.id" [checked]="tarefa.concluida">
       </td>
       <td class="text-center" style="width: 200px" *ngIf="!tarefa.concluida && tarefa.fav">
         <a href="#" title="Remover" alt="Remover" (click)="remover($event, tarefa)" class="btn btn-xs btn-danger"
           style="margin: 2px;">
           <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remover
         </a>
-        <a href="#" title="Importante" alt="Importante" (click)="alterarPrioridade(tarefa)"
+        <a href="#" title="Importante" alt="Importante" (click)="alterarPrioridade($event, tarefa)"
           class="btn btn-xs btn-warning" style="margin: 2px;">
           <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
         </a>
